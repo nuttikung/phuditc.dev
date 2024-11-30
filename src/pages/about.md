@@ -3,34 +3,21 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+สวัสดีเราชื่อภูดิท จึงเจริญ เราเป็นชาวไอทีคนนึงที่ทำเกี่ยวกับเว็บเป็นหลัก ปัจจุบันเรายังคงพัฒนากับ React และ Typescript เป็นหลัก
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
-
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+เราจบการศึกษามาจากสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง คณะไอทีหลักสูตรวิทยาศาสตรบัณฑิต เราเคยได้รับรางวัลชมเชยในการแข่งขันเกี่ยวกับการประมวลผลภาพ (Image Proccessing) ในหัวข้อ "การรู้จำตัวอักษรภาษาไทยโดยใช้การวิเคราะห์ลักษณะกราฟความถี่" [อ่านเพิ่มเติม](https://www.it.kmitl.ac.th/th/achievement/1613)
 
 <div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
+  <img src="/assets/award-1.jpg" class="sm:w-4/5 mx-auto rounded-md" alt="my-award-image-processing">
 </div>
 
-## Tech Stack
+นอกจานี้เราเคยได้ไปร่วมการแข่งขันในงาน Allianz Ayudhya Activator ในด้าน Insure Tech อีกด้วย
+โดยการร่วมงานครั้งนี้ก็เป็นการแข่งขันที่นำเอา Startup หลายๆที่มาแข่งกัน โดยที่มีการระดมความคิดตั้งแต่เริ่มจนถึงขั้นทำตัว demo ออกมาให้กรรมการเห็นและยังมีการ Pitching แข่งกันอีกด้วย โดยทีมของเราได้รางวัลที่ 3 ไปในครั้งนี้ ในส่วนนี้เราเป็นคนช่วยพํมนาเว็บและตัวอย่างรวมทั้งยังมีการทำ Deployment ของ AWS ด้วย เป็นอีกประสบการณ์ที่เหนื่อยมากแต่ก็สนุกมากเช่นเดียวกัน [อ่านเพิ่มเติม](https://www.it.kmitl.ac.th/th/achievement/1613)
 
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
+<div>
+  <img src="/assets/award-2.jpg" class="sm:w-4/5 mx-auto rounded-md" alt="my-award-alliance-activator">
+</div>
 
-## Features
+นอกเหนือจากที่กล่าวมาเราก็ยังมีประสบการณ์ทำงานเกี่ยวข้องกับโทรคมนาคม, การเงิน, กีฬาและระบบจัดการหลังบ้าน โดยจากประสบการณ์ทั้งหมดที่เรามีเราเคยทำงานเป็น Fullstack Web Developer, QA และ Mobile มาแล้วส่วนตัวเรายังชอบความเป็นเว็บมากกว่าเลยตัดสินใจมาทางนี้เป็นหลัก แต่ถ้ามีส่วน mobile มาก็คงไปทาง react native ได้เหมือนเดิม
 
-Here are certain features of this site.
-
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
-
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+ถ้ามีคำถามหรือสนใจที่จะมีช่องทางติดต่อกันสามารถติดต่อได้ทาง [LinkedIn](https://www.linkedin.com/in/phuditc) และสนับสนุนกันได้ที่ [กดตรงนี้](https://buymeacoffee.com/phuditc).

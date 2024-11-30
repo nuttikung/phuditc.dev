@@ -23,7 +23,14 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Mingalaba</h1>
+      <div id="hero-heading">
+        <img
+          src="https://png.pngtree.com/png-vector/20210604/ourmid/pngtree-gray-avatar-placeholder-png-image_3416697.jpg"
+          class="my-avatar"
+          alt="my-avatar"
+        />
+      </div>
+      <h1>Web Developer Blog</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -42,19 +49,18 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
 
       <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
+        ยินดีต้อนรับสู่พื้นที่ของฉัน ในพื้นที่ตรงนี้จะเป็นพื้นที่สำหรับการแชร์ความรู้เกี่ยวกับเว็บที่มาจากประสบการณ์หรือความคิดสร้างสรรค์ของฉัน
+        โดยที่บล็อกจะถูกโพสต์เมื่อฉันมีเรื่องที่อยากแชร์หรือฉันได้มีการแก้ปัญหาในชีวิตจริงไปเพื่อเอาไว้เตือนตัวฉันเองด้วยและฉันหวังว่าผู้คนที่ผ่านมาอ่านบล๊อกทางนี้จะได้ความรู้ไม่มากก็น้อยที่สามารถช่วยเหลืองานในชีวิตประจำวันหรือในโปรเจคจริงได้
+        ในชีวิตปัจจุบันส่วนมากจะเกี่ยวข้องกับ React และ Typescript ดังนั้นเนื้อหาแต่ละบทความจะเกี่ยวข้องกับสิ่งพวกนี้เป็นหลัก
       </p>
       <p>
-        Read the blog posts or check
+        สนับสนุนผลงานได้ที่
         <LinkButton
           className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
+          href="https://buymeacoffee.com/phuditc"
         >
-          README
-        </LinkButton> for more info.
+          กดตรงนี้
+        </LinkButton>
       </p>
       {
         // only display if at least one social link is enabled
@@ -129,6 +135,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   #hero {
     @apply pb-6 pt-8;
   }
+  #hero hero-heading {
+    @apply content-center;
+  }
   #hero h1 {
     @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
   }
@@ -146,6 +155,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   }
   .social-links {
     @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
+  }
+  .my-avatar {
+    @apply mx-auto rounded-full w-28 h-28 sm:w-48 sm:h-48;
   }
 
   /* ===== Featured & Recent Posts Sections ===== */

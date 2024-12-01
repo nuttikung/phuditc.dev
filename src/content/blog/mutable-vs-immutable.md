@@ -79,7 +79,7 @@ console.log(array1); // ราจะเห็นได้ว่า array1 ไม
 
 ```typescript
 const target = { a: 1, b: 2 };
-const mutateObj = { ...target };
+const mutateObj = target;
 target.a = 2; // แก้ target
 console.log(target); // { a: 2, b: 2 }
 console.log(mutateObj); // { a: 2, b: 2 } <--a เปลี่ยน

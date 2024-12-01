@@ -1,6 +1,7 @@
 ---
 author: Phudit Chuengjaroen
-pubDatetime: 2024-12-01T15:00:00Z
+pubDatetime: 2024-12-01T22:00:00Z
+modDatetime: 2024-12-02T06:40:00Z
 title: Mutable กับ Immutable ต่างกันยังไง ?
 slug: mutable-vs-immutable
 featured: true
@@ -119,8 +120,8 @@ console.log(returnedTarget); // { a: 1, b: 2 } <--a ไม่ได้เปล�
 
 ## Helper Library
 
-[Immer] (https://immerjs.github.io/immer)
-[Immutable.js] ()
+[Immer](https://immerjs.github.io/immer)
+[Immutable.js](https://immutable-js.com) 
 
 ## Conclusion from writer
 

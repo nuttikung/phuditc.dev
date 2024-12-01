@@ -6,7 +6,7 @@ export const SITE: Site = {
   profile: "https://phuditc.dev/",
   desc: "My personal blog via AstroPaper.",
   title: "Phudit Chuengjaroen",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "developer-og.jpeg",
   lightAndDarkMode: true,
   postPerIndex: 3,
   postPerPage: 5,

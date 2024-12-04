@@ -4,8 +4,8 @@ pubDatetime: 2024-12-07T17:00:00Z
 # modDatetime: 2023-12-21T09:12:47.400Z
 title: Router ใหม่ที่ช่วยให้ developer ทำงานง่ายขึ้นไปกับ type safe
 slug: tanstack-react-route-with-type-safe
-featured: false
-draft: true
+featured: true
+draft: false
 tags:
   - tanstack
   - router
@@ -76,4 +76,94 @@ export default defineConfig({
     // ...,
   ],
 });
+```
+
+## File Based Routing
+
+ต่อมาเรามาลองทำการ Routing แบบ File based กัน ให้สร้างไฟล์ `src/routes/__root.tsx` `src/routes/index.lazy.tsx` `src/routes/about.lazy.tsx` มา โดยที่ `__root.tsx` จะเป็นไฟล์หลักของการทำ Route ทั้งหมด จากตัวอย่างนี้แปลว่าเราจะมี Route ของ index (/) กับ about (/about) และทั้งสอง route มีการทำ **lazy load** จาก **.lazy**
+
+```tsx
+// src/routes/__root.tsx
+import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
+import { TanStackRouterDevtools } from "@tanstack/router-devtools";
+
+export const Route = createRootRoute({
+  component: () => (
+    <>
+      <div className="flex gap-2 p-2">
+        <Link to="/" className="[&.active]:font-bold">
+          Home
+        </Link>
+        <Link to="/about" className="[&.active]:font-bold">
+          About
+        </Link>
+      </div>
+      <hr />
+      <Outlet />
+      <TanStackRouterDevtools />
+    </>
+  ),
+});
+```
+
+```tsx
+// src/routes/index.lazy.tsx
+import { createLazyFileRoute } from "@tanstack/react-router";
+
+export const Route = createLazyFileRoute("/")({
+  component: Index,
+});
+
+function Index() {
+  return (
+    <div className="p-2">
+      <h3>Welcome Home!</h3>
+    </div>
+  );
+}
+```
+
+```tsx
+// src/routes/about.lazy.tsx
+import { createLazyFileRoute } from "@tanstack/react-router";
+
+export const Route = createLazyFileRoute("/about")({
+  component: About,
+});
+
+function About() {
+  return <div className="p-2">Hello from About!</div>;
+}
+```
+
+จากนั้นเรากลับมาอัพเดท `main.tsx`
+
+```tsx
+import { StrictMode } from "react";
+import ReactDOM from "react-dom/client";
+import { RouterProvider, createRouter } from "@tanstack/react-router";
+
+// Import the generated route tree
+import { routeTree } from "./routeTree.gen";
+
+// Create a new router instance
+const router = createRouter({ routeTree });
+
+// Register the router instance for type safety
+declare module "@tanstack/react-router" {
+  interface Register {
+    router: typeof router;
+  }
+}
+
+// Render the app
+const rootElement = document.getElementById("root")!;
+if (!rootElement.innerHTML) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <StrictMode>
+      <RouterProvider router={router} />
+    </StrictMode>
+  );
+}
 ```

@@ -4,8 +4,8 @@ pubDatetime: 2024-12-07T17:00:00Z
 # modDatetime: 2023-12-21T09:12:47.400Z
 title: Router ใหม่ที่ช่วยให้ developer ทำงานง่ายขึ้นไปกับ type safe
 slug: tanstack-react-route-with-type-safe
-featured: true
-draft: false
+featured: false
+draft: true
 tags:
   - tanstack
   - router

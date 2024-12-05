@@ -12,7 +12,7 @@ import { SITE, SOCIALS } from "@config";
 
 const posts = await getCollection("blog");
 
-const sortedPosts = getSortedPosts(posts);
+const sortedPosts = await getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
@@ -24,11 +24,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <main id="main-content">
     <section id="hero">
       <div id="hero-heading">
-        <img
-          src="/assets/profile.jpeg"
-          class="my-avatar"
-          alt="my-avatar"
-        />
+        <img src="/assets/profile.jpeg" class="my-avatar" alt="my-avatar" />
       </div>
       <h1>Web Developer Blog</h1>
       <a
@@ -49,9 +45,11 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
 
       <p>
-        ยินดีต้อนรับสู่พื้นที่ของฉัน ในพื้นที่ตรงนี้จะเป็นพื้นที่สำหรับการแชร์ความรู้เกี่ยวกับเว็บที่มาจากประสบการณ์หรือความคิดสร้างสรรค์ของฉัน
+        ยินดีต้อนรับสู่พื้นที่ของฉัน
+        ในพื้นที่ตรงนี้จะเป็นพื้นที่สำหรับการแชร์ความรู้เกี่ยวกับเว็บที่มาจากประสบการณ์หรือความคิดสร้างสรรค์ของฉัน
         โดยที่บล็อกจะถูกโพสต์เมื่อฉันมีเรื่องที่อยากแชร์หรือฉันได้มีการแก้ปัญหาในชีวิตจริงไปเพื่อเอาไว้เตือนตัวฉันเองด้วยและฉันหวังว่าผู้คนที่ผ่านมาอ่านบล๊อกทางนี้จะได้ความรู้ไม่มากก็น้อยที่สามารถช่วยเหลืองานในชีวิตประจำวันหรือในโปรเจคจริงได้
-        ในชีวิตปัจจุบันส่วนมากจะเกี่ยวข้องกับ React และ Typescript ดังนั้นเนื้อหาแต่ละบทความจะเกี่ยวข้องกับสิ่งพวกนี้เป็นหลัก
+        ในชีวิตปัจจุบันส่วนมากจะเกี่ยวข้องกับ React และ Typescript
+        ดังนั้นเนื้อหาแต่ละบทความจะเกี่ยวข้องกับสิ่งพวกนี้เป็นหลัก
       </p>
       <p>
         สนับสนุนผลงานได้ที่
@@ -157,7 +155,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
   }
   .my-avatar {
-    @apply mx-auto aspect-square rounded-full w-28 h-28 sm:w-48 sm:h-48;
+    @apply mx-auto aspect-square h-28 w-28 rounded-full sm:h-48 sm:w-48;
   }
 
   /* ===== Featured & Recent Posts Sections ===== */

@@ -1,7 +1,7 @@
 ---
 author: Phudit Chuengjaroen
 pubDatetime: 2024-12-05T10:00:00Z
-# modDatetime: 2023-12-21T09:12:47.400Z
+modDatetime: 2024-12-05T10:15:00Z
 title: Router ใหม่ที่ช่วยให้ developer ทำงานง่ายขึ้นไปกับ type safe
 slug: tanstack-react-route-with-type-safe
 featured: true
@@ -16,7 +16,7 @@ tags:
 description: Rounter ใหม่ที่มาพร้อมความสามารถที่เยอะขึ้นและทำให้ประสบการณ์ของนักพัฒนาดีขึ้นด้วยการสนับสนุน typesafe
 ---
 
-หากพูดถึงการพัฒนาเว็บก็คงหลีกเลี่ยงในส่วน **Application Routing** ไม่ได้ ซึ่งในอดีตก็ได้มีหลากหลายทางเลือกในบางครั้งก็มีการทำ sync router กับ Data store (เช่น redux หรือ mobx) เชื่อว่าหลายๆคนคุ้นเคย **_react router dom_** แต่ก็ยังมี remix router ด้วยและแล้ววันนึงทีม remix พวกเขาก็เข้าไปร่วมพัฒนา react router dom v7 ออกมา แต่นั่นไม่ใช่ประเด็นหลักครับเพราะก่อนหน้าที่จะมี v7 ออกมาผมได้ไปเจอ **TanStack Router** มาครับ ซึ่งมีหลายอย่างที่ผมตามหาเช่น type safe
+เมื่อพูดถึงการพัฒนาเว็บ หนึ่งในส่วนสำคัญที่ไม่สามารถหลีกเลี่ยงได้คือ **Application Routing** ซึ่งในอดีตมีหลายทางเลือกให้เลือกใช้ บางครั้งเราก็เห็นการทำ sync router กับ Data Store เช่น Redux หรือ MobX เชื่อว่าหลายๆ คนคงคุ้นเคยกับ **React Router DOM** แต่ก็ยังมี **Remix Router** ที่เป็นอีกทางเลือกหนึ่งและในที่สุดทีมงาน Remix ก็ได้เข้ามามีส่วนร่วมในการพัฒนา **React Router DOM v7** แต่นี้ไม่ใช่ประเด็นหลักครับ เพราะก่อนที่ v7 จะออกมา ผมได้พบกับ **TanStack Router** ซึ่งมีคุณสมบัติหลายอย่างที่ผมตามหา เช่น ความสามารถในการรองรับ type safety
 
 ## Table of contents
 
@@ -302,4 +302,5 @@ function RouteComponent() {
 
 ## Conclusion from writer
 
-Tanstack Router ทำมาได้ค่อนข้างดี เมื่อเทียบกับตัว react router dom v6 (ซึ่งปัจจุบัน react dom ได้อัพเดทเป็น version 7 และมีแนวคิดเรื่อง Flat Route หรือ support ใน Type บางอย่าง) ในส่วนของ Data Loader ก็ทำมาได้ค่อนข้างดี แถมยังมี Global Notfound หรือ Custom แต่ละ route ได้อีกและในการทำ Lazy โหลดก็ง่ายมากอีกด้วย
+Tanstack Router ทำได้ค่อนข้างดีเมื่อเทียบกับ React Router DOM v6 (ซึ่งปัจจุบัน React Router DOM ได้อัพเดทเป็นเวอร์ชัน 7 และมีแนวคิดใหม่เกี่ยวกับ Flat Route รวมถึงการรองรับในบาง Type)
+สำหรับ Tanstack Router เองในส่วนของ Data Loader ก็ทำได้ดีเช่นกัน แถมยังรองรับการใช้ Global Notfound หรือการกำหนด Custom Notfound สำหรับแต่ละ route ได้ นอกจากนี้ยังทำให้การ Lazy load ข้อมูลทำได้ง่ายและสะดวกมากขึ้นอีกด้วย

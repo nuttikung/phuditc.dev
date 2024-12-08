@@ -1,9 +1,9 @@
 ---
 author: Phudit Chuengjaroen
 pubDatetime: 2024-12-05T10:00:00Z
-modDatetime: 2024-12-05T10:15:00Z
-title: Router ใหม่ที่ช่วยให้ developer ทำงานง่ายขึ้นไปกับ type safe
-slug: tanstack-react-route-with-type-safe
+modDatetime: 2024-12-08T19:00:00Z
+title: Router ใหม่ที่ช่วยให้ developer ทำงานง่ายขึ้นไปกับ type safe (Part 1)
+slug: tanstack-react-route-with-type-safe-part-1
 featured: true
 draft: false
 tags:
@@ -195,36 +195,36 @@ if (!rootElement.innerHTML) {
 ├── index.tsx
 ├── about.tsx
 ├── posts/
-│   ├── index.tsx
-│   ├── $postId.tsx
+│── ├── index.tsx
+│── ├── $postId.tsx
 ├── posts.$postId.edit.tsx
 ├── settings/
-│   ├── profile.tsx
-│   ├── notifications.tsx
-│── _layout.tsx
+│── ├── profile.tsx
+│── ├── notifications.tsx
+│── _layout.tsx // Pathless Route (Layout)
 ├── _layout/
-│   ├── layout-a.tsx // Nested Route
+│── ├── layout-a.tsx // Nested Route
 ├── ├── layout-b.tsx // Nested Route
 ├── files/
-│   ├── $.tsx
+│──├── $.tsx
 ```
 
-| Path                    | Directory/File Location    | Render                        |
-| ----------------------- | -------------------------- | ----------------------------- |
-|                         | `__root__`                 | Root                          |
-| /                       | index.tsx                  | Root -> RootIndex             |
-| /about                  | about.tsx                  | Root -> About                 |
-| /posts                  | posts/index.tsx            | Root -> PostsIndex            |
-| /posts/1                | posts/$postId.tsx          | Root -> Post                  |
-| /posts/1/edit           | posts.$postId.edit.tsx     | Root -> EditPost              |
-| /settings/profile       | settings/profile.tsx       | Root -> ProfileSettings       |
-| /settings/notifications | settings/notifications.tsx | Root -> NotificationsSettings |
-|                         | `_layout`                  | Root -> Layout                |
-| /layout-a               | \_layout/layout-a.tsx      | Root -> Layout -> LayoutA     |
-| /layout-b               | \_layout/layout-b.tsx      | Root -> Layout -> LayoutB     |
-| /files/\*               | files/$.tsx                | Root -> Files                 |
+| Path                    | Render                        |
+| ----------------------- | ----------------------------- |
+| N/A                     | Root                          |
+| /                       | Root -> RootIndex             |
+| /about                  | Root -> About                 |
+| /posts                  | Root -> PostsIndex            |
+| /posts/1                | Root -> Post                  |
+| /posts/1/edit           | Root -> EditPost              |
+| /settings/profile       | Root -> ProfileSettings       |
+| /settings/notifications | Root -> NotificationsSettings |
+| N/A                     | Root -> Layout                |
+| /layout-a               | Root -> Layout -> LayoutA     |
+| /layout-b               | Root -> Layout -> LayoutB     |
+| /files/\*               | Root -> Files                 |
 
-จากตารางถ้าเราจำทำตัว Nested Route ก็คือตรง Layout จะเป็นการ Render Layout ก่อนแล้วต่อด้วย LayoutA หรือ LayoutB
+จากตารางข้างบนเป็นการแสดงว่า Path ไหนจะมีการ render component ยังไงบ้างและในกรณีนี้มีได้มีการทำ Nested Route ตรง Layout หมายความว่า Render Layout ก่อนแล้วต่อด้วย LayoutA หรือ LayoutB ด้วย Path `/layout-a` หรือ `layout-b`
 
 ```tsx
 // _layout.tsx

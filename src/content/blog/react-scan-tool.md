@@ -1,6 +1,7 @@
 ---
 author: Phudit Chuengjaroen
 pubDatetime: 2024-12-02T23:40:00Z
+modDatetime: 2024-12-22T18:30:00Z
 title: เครื่องมือช่วยนักพัฒนาเว็บ React-Scan
 slug: react-scan-web-tool
 featured: true
@@ -8,7 +9,8 @@ draft: false
 tags:
   - react
   - react-scan
-description: ตามจับ rendering ของ react ด้วยการสแกนเว็บไซต์
+  - performance
+description: ติดตาม rendering ของ React ด้วยเครื่องมือใหม่ที่สามารถสแกนเว็บไซต์ได้
 ---
 
 ในปัจจุบันขาเดฟคงน่าจะเคยได้ยินเครื่องมือที่ใช้ตรวจประสิทธิภาพของเว็บอยู่บ้าง เช่น
@@ -212,6 +214,10 @@ export default App;
 ต่อมาเราลองไปพิมพ์ค่าใน input หรือกดปุ่มจาก counter จะเห็นได้เลยว่า component อื่นๆไม่ได้ถูก render ใหม่ที่เป็นแบบนี้เพราะว่าตัว state ไม่ได้อยู่ใน `App.tsx` แล้วแต่ไปอยู่ใน component ต่างๆแทน
 
 ![Simple Optimize](@assets/react-scan/simple-optimize.gif)
+
+## Chrome Extension (Develop mode)
+
+ตอนนี้มีให้ทาง React scan ได้ทำตัว Chrome Extension แบบ Developer mode กันอยู่เมื่อสมบูรณ์ถึงจะปล่อยเป็นตัวตาม ส่วนวิธีการเปิดใช้งานดูเพิ่มเติม [ที่นี่](https://github.com/aidenybai/react-scan/blob/main/CHROME_EXTENSION_GUIDE.md)
 
 ## Scanning any site
 

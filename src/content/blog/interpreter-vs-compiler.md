@@ -1,6 +1,6 @@
 ---
 author: Phudit Chuengjaroen
-pubDatetime: 2025-05-03T11:45:00Z
+pubDatetime: 2025-03-05T11:45:00Z
 title: Interpreter กับ Compiler ต่างกันยังไง
 slug: interpreter-vs-compiler
 featured: true

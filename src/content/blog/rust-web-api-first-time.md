@@ -73,7 +73,7 @@ resources:
 
 ![Rust cpu memory specify time](@assets/rust-web-api/rust-spu-time-expanded.png)
 
-จากภาพจะเห็นได้ว่าเมื่อตอนที่ทีมมีการทำ Work Shop กัน CPU ยังไปไม่ถึง 5% และ Memory ก็ไปไม่ถึง 10% (1 Core, 512 MB ตามที่ระบุในส่วน resources limits)
+จากภาพจะเห็นได้ว่าเมื่อตอนที่ทีมมีการทำ Work Shop (Team Size 10-15 คน) กัน CPU ยังไปไม่ถึง 5% และ Memory ก็ไปไม่ถึง 10% (1 Core, 512 MB ตามที่ระบุในส่วน resources limits)
 
 ## Conclusion from writer
 

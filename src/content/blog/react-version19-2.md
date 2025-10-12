@@ -1,6 +1,6 @@
 ---
 author: Phudit Chuengjaroen
-pubDatetime: 2025-10-13T11:45:00Z
+pubDatetime: 2025-10-12T11:45:00Z
 title: <Activity /> ใน React 19.2 คืออะไรและน่าสนใจอย่างไร
 slug: react-19.2
 featured: true

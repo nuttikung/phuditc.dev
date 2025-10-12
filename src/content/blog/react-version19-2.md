@@ -1,6 +1,6 @@
 ---
 author: Phudit Chuengjaroen
-pubDatetime: 2025-10-13T11:45:00Z
+pubDatetime: 2025-10-12T11:45:00Z
 title: <Activity /> ใน React 19.2 คืออะไรและน่าสนใจอย่างไร
 slug: react-19.2
 featured: true
@@ -105,7 +105,7 @@ const Page = () => {
 `<Activity />` component ใน React 19.2 เป็นนวัตกรรมที่น่าสนใจมากสำหรับการจัดการ performance และ user experience โดยให้ประโยชน์หลักดังนี้:
 
 ### ข้อดีที่ได้รับ
-- **ปรับปรุง Time to Interact**: ลดเวลาการโต้ตอบจาก 10 วินาที เหลือ 6 วินาที (ประมาณ 40% faster)
+- **ปรับปรุงเวลาในการตอบสนอง**: ลดระยะเวลาที่ผู้ใช้งานต้องรอเพื่อโต้ตอบกับหน้าจอ
 - **รักษา State**: component ที่อยู่ในโหมด `hidden` จะคงสถานะไว้ ไม่ต้อง reset ใหม่
 - **จัดลำดับความสำคัญ**: React สามารถจัดการ priority ในการ render ได้ดีขึ้น
 
